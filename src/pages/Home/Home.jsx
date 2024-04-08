@@ -12,6 +12,7 @@ import MedicalWriting from  '../../assets/file2.png'
 import training from  '../../assets/file4.png'
 import { TestiMonials } from "../../components/Testimonial/TestiMonials";
 import { ContactForm } from "./ContactForm";
+import { TopNavbar } from "../../components/TopNavbar/TopNavbar";
 
 const ourServices = [
   {
@@ -63,7 +64,11 @@ const ourAminities = [
 export const Home = () => {
   return (
     <section>
+      <div className='max-w-[1200px] mx-auto'>
+
+      <TopNavbar />
       <Navbar />
+      </div>
       <Hero />
 
       {/* Section about clinical research */}
@@ -130,7 +135,6 @@ export const Home = () => {
           })}
         </div>
       </div>
-
 
       <TestiMonials />
 
