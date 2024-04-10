@@ -5,7 +5,7 @@ import { GiWorld } from "react-icons/gi";
 const data = [
   {
     title: "Delhi India",
-    subTitle: "1324, 13th Floor, Ansal Tower",
+    subTitle: "1324, Ansal Tower",
     icon: <GiWorld size={"30px"} color='#22b6b0' />,
   },
   {
@@ -23,7 +23,7 @@ export const TopNavbar = () => {
 
   return (
     <div className='grid grid-cols-4   justify-center'>
-      <div className='bg-red-300 justify-center grid py-6'>Logo</div>
+      <div className='text-5xl justify-center grid py-6 font-semibold text-primaryText'> MEDNEX</div>
       {data.map((item, index) => {
         const { title, subTitle, icon } = item;
         return (

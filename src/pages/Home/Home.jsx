@@ -3,7 +3,6 @@ import { GiMicroscope } from "react-icons/gi";
 import { Banner } from "../../components/Banner/Banner";
 import Hero from "../../components/Hero/Hero";
 import Navbar from "../../components/Navbar/Navbar";
-import { TestiMonials } from "../../components/Testimonial/TestiMonials";
 import { TopNavbar } from "../../components/TopNavbar/TopNavbar";
 import { ContactForm } from "./ContactForm";
 import { Services } from "./Services";
@@ -11,7 +10,8 @@ import { Services } from "./Services";
 import { GoGear } from "react-icons/go";
 import { GrUserExpert } from "react-icons/gr";
 
-import WhyUs  from  '../../assets/whyUs.jpg'
+import WhyUs from '../../assets/whyUs.jpg';
+import { Testimonials } from "./Testimonials";
 export const Home = () => {
   return (
     <section>
@@ -65,7 +65,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <TestiMonials />
+      <Testimonials />
+    
 
       <ContactForm />
     </section>
