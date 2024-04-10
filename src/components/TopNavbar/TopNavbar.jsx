@@ -14,7 +14,7 @@ const data = [
     icon: <MdOutlineAttachEmail size={"30px"} color='#22b6b0' />,
   },
   {
-    title: "+91 9899 377 287",
+    title: "+91 8448 728 057",
     subTitle: "Make a call",
     icon: <BiPhoneCall size={"30px"} color='#22b6b0' />,
   },

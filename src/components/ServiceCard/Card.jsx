@@ -2,14 +2,11 @@ import React from "react";
 
 export const Card = ({ icon, heading, paragraph }) => {
   return (
-    <div className='w-full hover:scale-95 cursor-pointer pb-10 hover:bg-[#edeaea] transition-all duration-700 border border-[#c3c3c3]  rounded shadow px-5  flex flex-col items-center gap-4'>
-      <div className="h-20 w-20 mt-10">
-        <img src={icon} alt='' height={"100%"} width={"100%"}/>
-      </div>
-      <h1 className='text-primaryText text-2xl  font-semibold'>{heading}</h1>
-      <p className='text-secondaryText mt-4 text-lg font-medium text-justify'>
-        {paragraph}
-      </p>
+    <div className="px-4 py-3 flex flex-col text-center font-semibold text-xl gap-5 text-primaryText hover:bg-customGreen hover:bg-opacity-20 transition-all duration-500 cursor-pointer border rounded hover:shadow-2xl  border-customGreen">
+      <img src={icon} alt="" className="w-24 mx-auto bg-gray-100 px-4 py-4" />
+      <h3>{heading}</h3>
+      <p className="font-light text-base text-justify ">{paragraph}</p>
+
     </div>
   );
 };

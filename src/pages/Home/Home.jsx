@@ -1,141 +1,70 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import { GiMicroscope } from "react-icons/gi";
+import { Banner } from "../../components/Banner/Banner";
 import Hero from "../../components/Hero/Hero";
-import ResearchImg from "../../assets/img-1.webp";
-import { Card } from "../../components/ServiceCard/Card";
-
-import VentilatorImg from "../../assets/ventilator.png";
-import SitemanagementImg from "../../assets/worksheet.png";
-import RecordImg from "../../assets/project-management.png";
-import Insourcing from  '../../assets/file1.png'
-import MedicalWriting from  '../../assets/file2.png'
-import training from  '../../assets/file4.png'
+import Navbar from "../../components/Navbar/Navbar";
 import { TestiMonials } from "../../components/Testimonial/TestiMonials";
-import { ContactForm } from "./ContactForm";
 import { TopNavbar } from "../../components/TopNavbar/TopNavbar";
+import { ContactForm } from "./ContactForm";
+import { Services } from "./Services";
 
-const ourServices = [
-  {
-    id: 1,
-    icon: SitemanagementImg,
-    heading: "Site Management Services",
-    paragraph: `Medrix Clinical Research site management organization (SMO) was created to fill an unmet need for quality site management Services for clinical trials industry in the North India region where Medrix Clinical Research already has several years of experience undertaking CRO projects.The SMO trains and provides Clinical Research Coordinators (CRC’s) as well as other cadres of site support staff who will support clinical trial investigators especially in small clinical trial sites and doctor’s clinics with site feasibility, Site Selection process, Regulatory/IRB support, patient recruitment, enrollment and follow up, close out and Study Records Archival.`,
-  },
-  {
-    id: 2,
-    icon: RecordImg,
-    heading: "Record Management Services",
-    paragraph:
-      "We are providing end to end physical Documents Storage solutions, which if implemented can help you to map the overall record storage scenario within your organization, thus resulting in quick decision making, elevated organizational efficiency and higher productivity. Our Record Management Services are cost-effective and can be customized as per your needs and requirements. ",
-  },
-  {
-    id: 3,
-    icon: VentilatorImg,
-    heading: "Equipment Calibration Services",
-    paragraph:
-      "Medical Equipment Calibration is carried out to minimize the uncertainty in measurements, reducing errors and bringing measurements to an acceptable level. With repeated use and over a period of time, all equipment begins to degrade and that affects its accuracy and precision. Regularly calibrating equipment will ensure that industry defined standards are met and that the equipment is functional thus providing accurate output.",
-  },
-];
+import { GoGear } from "react-icons/go";
+import { GrUserExpert } from "react-icons/gr";
 
-
-
-const ourAminities = [
-  {
-    id: 1,
-    icon: Insourcing,
-    heading: "Insourcing",
-    paragraph: `Because Clinical Research is conducted in a dynamic environment, it is important to ensure we have sufficient manpower.`,
-  },
-  {
-    id: 2,
-    icon: MedicalWriting,
-    heading: "Medical Writing Service",
-    paragraph:
-      "We understand the complexity and importance of Medical writing and to provide this service we have the experts for preparation of scientific documents.",
-  },
-  {
-    id: 3,
-    icon: training,
-    heading: "Training ",
-    paragraph:
-      "Mednex Research Solutions conducts training programs , Ethics in Clinical Research and ( ICH - GCP ) Good Clinical Practices in Clinical Research for all levels of site staff . ",
-  },
-];
+import WhyUs  from  '../../assets/whyUs.jpg'
 export const Home = () => {
   return (
     <section>
       <div className='max-w-[1200px] mx-auto'>
-
-      <TopNavbar />
-      <Navbar />
+        <TopNavbar />
+        <Navbar />
       </div>
       <Hero />
 
       {/* Section about clinical research */}
+      <Services />
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-[1200px] mx-auto mt-10'>
-        <div className=''>
-          <span>Who are we</span>
-          <h1 className='text-primaryText text-5xl  font-bold'>
-            About Clinical Research{" "}
+      <Banner
+        heading={"We Are The Trusted Experts We Keep Things Simple."}
+        para={
+          "We pride ourselves on being the trusted experts in the field. With our extensive experience and dedication to excellence, we provide unparalleled support and guidance throughout every stage of the research process. Our commitment to simplicity ensures that our clients can navigate complex challenges with ease, allowing them to focus on what matters most – advancing medical knowledge and improving patient outcomes. "
+        }
+      />
+
+      {/*  WHY US */}
+
+      <div className='max-w-[1200px] mx-auto grid grid-cols-3 my-20 '>
+        <div className='left col-span-1'>
+          <img src={WhyUs} alt='' />
+        </div>
+        <div className='right col-span-2 px-4 py-4 flex flex-col gap-6 bg-white'>
+          <span className='flex px-1  border-l-4 border-l-customGreen font-semibold text-primaryText'>
+            Why Mednex
+          </span>
+          <h1 className='text-primaryText  text-5xl font-semibold'>
+            Because We Think <br /> Beyond Your Boundaries
           </h1>
-          <p className='text-secondaryText mt-4 text-lg font-medium text-justify'>
-            A Clinical research is a scientific study of the effects, risks,
-            efficacy and benefit of a medicinal product. These are carried out
-            prior to the release of the medicine in the market. These trials are
-            undertaken at various stages and studies are conducted after the
-            launch of a new product to monitor safety and side effects during
-            large-scale use. Clinical trials are conducted by Pharmaceutical
-            companies or Contract Research Organization (CROs) / Site Management
-            Organization (SMOs) on their behalf.{" "}
+          <p className='text-gray-600  text-base'>
+            We deliver scientific discoveries and technical breakthroughs needed
+            to realize great solutions in energy.
           </p>
-          <button className='bg-btnBg text-white font-semibold  mt-4 px-3 py-1 rounded-md hover:bg-btnHover'>
-            Read More
-          </button>
-        </div>
-        <div className='w-full  bg-sky-200'>
-          <img src={ResearchImg} alt='' width={"100%"} height={"100%"} />
-        </div>
-      </div>
-      {/*  explaining our services */}
 
-      <div className='max-w-[1200px] mx-auto my-10  '>
-        <h1 className='text-center mb-10 text-3xl font-semibold  '>
-          {" "}
-          Our Services
-        </h1>
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-5'>
-          {ourServices.map((item, i) => {
-            return (
-              <Card
-                icon={item.icon}
-                key={i}
-                heading={item.heading}
-                paragraph={item.paragraph}
-              />
-            );
-          })}
+          <div className='flex flex-col mt-10 gap-4 text-primaryText font-semibold text-xl  py-3'>
+            <div className='flex px-4 py-2 gap-4 items-center bg-[#f2f6ff]'>
+              <GrUserExpert size={40} color='#22b6b0' />
+              <h3>35 Years’ Experience</h3>
+            </div>
+            <div className='flex gap-4 px-4 py-2 items-center bg-[#f2f6ff]'>
+              <GiMicroscope size={40} color='#22b6b0' />
+              <h3>Medical Excellence</h3>
+            </div>
+            <div className='flex gap-4 px-4 py-2 items-center bg-[#f2f6ff]'>
+              <GoGear size={40} color='#22b6b0' />
+              <h3>In-Person Or Online Service</h3>
+            </div>
+          </div>
         </div>
       </div>
-      <div className='max-w-[1200px] mx-auto mt-20  '>
-        <h1 className='text-center mb-10 text-3xl font-semibold  '>
-          {" "}
-          Our Amenities
-        </h1>
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-5'>
-          {ourAminities.map((item, i) => {
-            return (
-              <Card
-                icon={item.icon}
-                key={i}
-                heading={item.heading}
-                paragraph={item.paragraph}
-              />
-            );
-          })}
-        </div>
-      </div>
-
       <TestiMonials />
 
       <ContactForm />
