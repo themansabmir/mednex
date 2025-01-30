@@ -12,17 +12,23 @@ import { GrUserExpert } from "react-icons/gr";
 
 import WhyUs from '../../assets/whyUs.jpg';
 import { Testimonials } from "./Testimonials";
+import Stats from "../../DScomponents/Stats";
+import HeroHeader from "../../DScomponents/HeroHeader";
+import ServicesDS from "../../DScomponents/ServicesDS";
 export const Home = () => {
   return (
     <section>
-      <div className='max-w-[1200px] mx-auto'>
-        <TopNavbar />
-        <Navbar />
+      <div className=''>
+        {/* <TopNavbar /> */}
+        <HeroHeader />
+        <ServicesDS/>
+        {/* <Navbar /> */}
       </div>
       <Hero />
 
       {/* Section about clinical research */}
       <Services />
+      <Stats />
 
       <Banner
         heading={"We Are The Trusted Experts We Keep Things Simple."}
@@ -66,7 +72,7 @@ export const Home = () => {
         </div>
       </div>
       <Testimonials />
-    
+
 
       <ContactForm />
     </section>
